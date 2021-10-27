@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.video-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    border-radius: 10px;
+    border: 4px solid black;
+    background: #000;
+}
+.video {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    cursor: pointer;
+    max-height: calc(100vh - 55px)
+}
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.controls-top {
+    width: 100%;
+    height: 15px;
+    padding-top: 10px;
+}
+.video-line-total {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.right-prog-video-line {
+    width: 0%;
+    height: 4px;
+    background: blue;
+    border-radius: 2px;
+}
+.controls-down {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-radius: 0 0 10px 10px;
+}
+.left-side {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+#play-pause {
+    color: white;
+    cursor: pointer;
+}
+#volume-up {
+    color: white;
+    margin: 0 10px 0 25px;
+    cursor: pointer;
+}
+.volume-range {
+    width: 100px;
+    cursor: pointer;
+}
+#volume-range-line{
+    width: 100%;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    position: relative;
+    z-index: 2;
+}
+.volume-range-line-bg {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(211, 211, 211, 0.5);
+    position: relative;
+    top: -4px;
+    z-index: 1;
+}
+.right-side {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+.select {
+    cursor: pointer;
+    outline: none;
+}
+.time {
+    color: white;
+    margin: 0 25px;
+}
+.fa-expand {
+    color: white;
+    cursor: pointer;
+}
+/*******************
+responsive for ipad
+*******************/
+@media (max-width: 1200px) {
+    .video-player {
+        width: 95%;
+    }
+}
+/*******************
+responsive for mob
+*******************/
+@media (max-width: 767px) {
+    .controls {
+        width: 110%;
+        transform: scale(0.9);
+    }
+    #volume-up {
+        margin: 0px 5px 0 10px;
+    }
+    .volume-range {
+        width: 60px;
+    }
+    .time {
+        margin: 0px 10px;
+    }
+}
+@media (max-width: 300px) {
+    .controls {
+        width: 125%;
+        transform: scale(0.8);
+    }
+}
